@@ -1,2 +1,4 @@
 .venv
-example.log
+*.log
+*.csv
+!tests/source_files/**
