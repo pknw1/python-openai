@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web_crawler:
+    build: ./
+    image: pknw1/data_chunking
+    container_name: data_chunking
+    hostname: data_chunking
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp:/tmp
+      - ../output:/output
+    environment:
+      - TZ=Europe/London
+      - PUID=666
+      - PGID=666

@@ -31,8 +31,8 @@ def convert_to_text(identifier):
     print(row[1].ftype)
     text = textract.process(row[1].fname, encoding='utf-8')
     text = str(text).replace('\\n','')
-    text = str(text).replace('\n',' ')
-    text = str(text).replace('\r',' ')
+    text = str(text).replace('\n','. ')
+    text = str(text).replace('\r','. ')
     text = str(text).replace(' | ',' ')
 
     print(text)

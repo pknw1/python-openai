@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web_crawler:
+    build: ./
+    image: pknw1/file_processing
+    container_name: file_processing
+    hostname: file_processing
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp:/tmp
+      - ../output:/output
+    environment:
+      - TZ=Europe/London
+      - PUID=666
+      - PGID=666

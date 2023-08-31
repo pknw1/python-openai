@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  web_crawler:
+    build: ./
+    image: pknw1/tokenization_csv
+    container_name: tokenization_csv
+    hostname: tokenization_csv
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+      - /tmp:/tmp
+      - ../output:/output
+    environment:
+      - TZ=Europe/London
+      - PUID=666
+      - PGID=666
